@@ -1,30 +1,28 @@
-# 4u – Response Layer 7 (iki1uc)
+# KIpi · Ursache‑Wirkungsformel · Geometrie · QI/IQQ  
+KIpi ist der Parameter‑Koordinator des iki1uc‑Systems.  
+Er verbindet Ursache, Wirkung und Ergebnis zu einer arithmerischen Kausal‑Geometrie.
 
-4u ist die 7. Response-Ebene im iki1uc-System.
-Sie ersetzt die alte RESPO-Achse durch ein neues, systemisches Modell:
+---
 
-OK / NOK / FLOW / BREAK / ECHO / VOID / ROOT
+## Ursache‑Wirkungsformel (Grundmodell)
 
-4u verbindet:
-- PX-TRIO (PX3 / PX6 / PX9)
-- PX12 / PX4 (Fusion + Achse)
-- SYS / SYS-x (System + Kreuzung)
-- 2me (Mirror-Return)
-- TEM (Zeit)
-- UI-SCANNER (Interface)
+Die KIpi‑Formel besteht aus drei Mengen:
 
------------------------------------------
-# FUNKTION
+U = {◉, 3}  
+W = {◎, ◆, △, ▣}  
+E = {81, 756, 27, ↺}
 
-respo.OK     → Zustimmung  
-respo.NOK    → Ablehnung  
-respo.FLOW   → System fließt  
-respo.BREAK  → System bricht  
-respo.ECHO   → Spiegelung  
-respo.VOID   → Neutral  
-respo.ROOT   → Rückkehr
+Diese Mengen bilden die Ursache‑Wirkungs‑Kette:
 
------------------------------------------
-# STATUS
+**KIpi(U → W → E)**
 
-4u ist aktiv, eigenständig und vollständig iki1uc.
+- **Ursache**: Ursprung + Erstimpuls  
+- **Wirkung**: Mitte + Verzweigung + Aufstieg + Verdichtung  
+- **Ergebnis**: drei Resultate + Rückkehr
+
+---
+
+## Geometrische Darstellung (ASCII‑Kausal‑Achse)
+
+Die Ursache‑Wirkungsformel besitzt eine interne geometrische Struktur:
+
