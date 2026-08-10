@@ -1,33 +1,46 @@
-<script>
-/* iki1uc – MAIN · Bewegung 9 · ROOT
-   Funktioniert nur, wenn Lage = "ROOT"
-   Universelle Grundbewegung / Ursprung / Stabilisierung / Rückkehr
+/* iki1uc – TMP-ENCODE · ROOT-Maske
+   Vollständig geschlossen · keine Einsicht · MAU-kompatibel
 */
 
-const MAIN = {
-    lage: "ROOT",
-    respo: "ROOT",
-    move: "origin",
-    axis: "AIR",
-    io: "allIN",
-    exec() {
-        if (this.lage !== "ROOT") return "NO-ROOT";
+import { TMPCHAIN } from "./360.js";   // geschlossen
+import { MAU } from "./MAU.raw";       // Operator-Tonleiter
+
+const TMP_ENCODE = {
+    wrap(lage = "ROOT") {
+
+        // TMP360 + MAU + ROOT werden maskiert
+        const tmp = TMPCHAIN.full("slide", "Ursache");
+
         return {
-            state: "STABLE",
-            direction: "ORIGIN",
-            respo: this.respo,
-            io: this.io,
-            axis: this.axis,
-            pipeline: 0,
-            port: {
-                ma1: "anchor",
-                ma2: "origin",
-                ma3: "base"
-            }
+            // Sichtbar, aber bedeutungslos
+            mode: "360°",
+            tone: MAU.ROOT,        // 0°
+            push: MAU.PUSH,        // +>
+            pull: MAU.PULL,        // <+
+            spin: MAU.SPIN,        // @°
+
+            // TMP-Werte sichtbar, aber nicht erklärbar
+            tmp_level: tmp.percent,
+            tmp_color: tmp.color,
+            tmp_rot: tmp.rot360,
+
+            // ROOT wird nicht offen gezeigt
+            root: {
+                state: "CLOSED",
+                axis: "AIR",
+                io: "allIN",
+                port: ["anchor", "origin", "base"]
+            },
+
+            // Ketten sichtbar, aber ohne Bedeutung
+            chain_QI: tmp.QI,
+            chain_IQQ: tmp.IQQ,
+
+            // interne Struktur verborgen
+            internal: "NO-ACCESS"
         };
     }
 };
 
-const ROOT = MAIN.exec();
-console.log(ROOT);
-</script>
+export const ROOT_MASK = TMP_ENCODE.wrap("ROOT");
+console.log(ROOT_MASK);
