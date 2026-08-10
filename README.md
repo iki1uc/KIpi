@@ -1,13 +1,7 @@
-Diese Version ist NICHT klonbar,
-weil sie mit deiner NO‑CLONE‑Lizenz harmoniert
-und die Struktur klar definiert ist.
-
-Du kannst das genau so übernehmen.
-
 KIpi · Ursache‑Wirkungsformel · Geometrie · QI/IQQ
 KIpi ist der Parameter‑Koordinator des iki1uc‑Systems.
-Er verbindet Ursache, Wirkung und Ergebnis zu einer arithmerischen Kausal‑Geometrie.
-Die Struktur ist geschützt durch die NO‑CLONE LICENSE (NCL).
+Es verbindet Ursache, Wirkung und Ergebnis zu einer arithmerischen Kausal‑Geometrie.
+Die Struktur ist geschützt durch die NO‑CLONE LICENSE (NCL) und darf nicht kopiert, geklont oder nachgebaut werden.
 
 Ursache‑Wirkungsformel (Grundmodell)
 Die KIpi‑Formel besteht aus drei Mengen:
@@ -21,68 +15,109 @@ Diese Mengen bilden die Ursache‑Wirkungs‑Kette:
 KIpi(U → W → E)
 
 Bedeutung
-Ursache (U)  
-Ursprung · Erstimpuls · Dreifach‑Start
+Ursache (U) — Ursprung · Erstimpuls · Dreifach‑Start
+→ U‑Analyse
 
-Wirkung (W)  
-Mitte · Verzweigung · Aufstieg · Verdichtung
+Wirkung (W) — Mitte · Verzweigung · Aufstieg · Verdichtung
+→ W‑Analyse
 
-Ergebnis (E)  
-Vollform · Verdichtung · Kompression · Rückkehr
+Ergebnis (E) — Vollform · Verdichtung · Kompression · Rückkehr
+→ E‑Analyse
 
 Geometrische Darstellung (ASCII‑Kausal‑Achse)
-Die Ursache‑Wirkungsformel besitzt eine interne geometrische Struktur:
-
 Code
 ◉  →  ◎ ◆ △ ▣  →  81 / 756 / 27 / ↺
 Diese Achse bildet die arithmerische Kausal‑Geometrie des Systems.
+Sie zeigt die Bewegung von Ursprung → Mitte → Ergebnis.
+
+→ Geometrie‑Modul
 
 QI / IQQ · Interne Vektoren
 KIpi nutzt zwei interne Vektor‑Systeme:
 
-QI = Primär‑Impulsfolge
+QI — Primär‑Impulsfolge
+→ QI‑Vektor
 
-IQQ = Rückkopplungs‑Impulsfolge
+IQQ — Rückkopplungs‑Impulsfolge
+→ IQQ‑Vektor
 
 Beide Vektoren dienen der internen Bewertung von
 Ursache → Wirkung → Ergebnis.
 
-Schutz & Nutzung
-Dieses System ist online nutzbar,
-aber durch die NO‑CLONE LICENSE (NCL) geschützt.
+KIpi‑Module (geschützt, nicht klonbar)
+ROOT — Ursprung
 
-Struktur darf NICHT kopiert werden
+SHIFT — Übergang
 
-Technik darf NICHT geklont werden
+SPIN — Rotation
 
-Module dürfen NICHT nachgebaut werden
+FLOW — Fluss
 
-Nutzung ist erlaubt
+PULL — Anziehung
 
-Lernen ist erlaubt
+PUSH — Abstoßung
 
-Weitergabe ist NICHT erlaubt
+BREAK — Unterbrechung
 
-⭐ LICENSE (NO‑CLONE)
-Damit dein Projekt closed online ist,
-muss die Lizenz genau so aussehen:
+DROP — Abwurf
 
-Code
-NO-CLONE LICENSE (NCL)
+RISE — Aufstieg
 
-Copyright (c) 2026 Ridvan (iki1uc)
+EDITport — Bearbeitung
+
+EXport — Ausgabe
+
+IMport — Eingabe
+
+Alle Module sind durch die NCL‑Lizenz geschützt.
+
+KIpi.raw · MAU.raw · MAIN.raw
+MAU.raw — Ursache‑Vektor
+→ MAU
+
+MAIN.raw — Ergebnis‑Vektor
+→ MAIN
+
+KIpi.raw — vollständige Kausal‑Pipeline
+→ Pipeline
+
+TMP360 / TMPCHAIN (interne Bewertung)
+TMP360 — Rotations‑Analyse
+→ TMP360
+
+TMPCHAIN — Kausal‑Kettenanalyse
+→ TMPCHAIN
+
+Beide Systeme dienen der Live‑Auswertung.
+
+Schutz & Nutzung (Closed‑Online)
+Dieses System ist online nutzbar, aber durch die
+NO‑CLONE LICENSE (NCL) geschützt.
 
 Erlaubt:
-- Nutzung der Software
-- Lernen aus der Software
-- Ausführen der Software
+Nutzung
+
+Lernen
+
+Ausführen
 
 Nicht erlaubt:
-- Kopieren der Struktur
-- Kopieren der Technik
-- Erstellen von Klonen
-- Verkauf von Kopien
-- Nutzung der Technik zur Nachbildung
+Kopieren der Struktur
 
-Diese Software darf nicht geklont, kopiert oder nachgebaut werden.
-Alle Rechte bleiben beim Autor.
+Klonen der Technik
+
+Nachbauen der Module
+
+Verkauf von Kopien
+
+Ableitung neuer Systeme aus KIpi
+
+→ Lizenz anzeigen
+
+Status
+KIpi ist ein closed‑online System:
+sichtbar, nutzbar, aber nicht kopierbar.
+
+→ KIpi.system  
+→ KIpi.index  
+→ KIpi.live
