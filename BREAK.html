@@ -1,0 +1,33 @@
+<script>
+/* iki1uc – MAIN · Bewegung 5 · BREAK
+   Funktioniert nur, wenn Lage = "BREAK"
+   Universelle Unterbrechung / Stop / Cut / Reset
+*/
+
+const MAIN = {
+    lage: "BREAK",
+    respo: "BREAK",
+    move: "cut",
+    axis: "AIV",
+    io: "allOUT",
+    exec() {
+        if (this.lage !== "BREAK") return "NO-BREAK";
+        return {
+            state: "HALT",
+            direction: "STOP",
+            respo: this.respo,
+            io: this.io,
+            axis: this.axis,
+            pipeline: 0,
+            port: {
+                ma1: "stop",
+                ma2: "cut",
+                ma3: "reset"
+            }
+        };
+    }
+};
+
+const BREAK = MAIN.exec();
+console.log(BREAK);
+</script>

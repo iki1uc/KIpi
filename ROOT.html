@@ -1,0 +1,33 @@
+<script>
+/* iki1uc – MAIN · Bewegung 9 · ROOT
+   Funktioniert nur, wenn Lage = "ROOT"
+   Universelle Grundbewegung / Ursprung / Stabilisierung / Rückkehr
+*/
+
+const MAIN = {
+    lage: "ROOT",
+    respo: "ROOT",
+    move: "origin",
+    axis: "AIR",
+    io: "allIN",
+    exec() {
+        if (this.lage !== "ROOT") return "NO-ROOT";
+        return {
+            state: "STABLE",
+            direction: "ORIGIN",
+            respo: this.respo,
+            io: this.io,
+            axis: this.axis,
+            pipeline: 0,
+            port: {
+                ma1: "anchor",
+                ma2: "origin",
+                ma3: "base"
+            }
+        };
+    }
+};
+
+const ROOT = MAIN.exec();
+console.log(ROOT);
+</script>

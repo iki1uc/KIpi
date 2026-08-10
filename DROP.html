@@ -1,0 +1,33 @@
+<script>
+/* iki1uc – MAIN · Bewegung 8 · DROP
+   Funktioniert nur, wenn Lage = "DROP"
+   Universelle Abwärtsbewegung / Entlastung / Abgabe / Reduktion
+*/
+
+const MAIN = {
+    lage: "DROP",
+    respo: "NOK",
+    move: "descend",
+    axis: "AIV",
+    io: "allOUT",
+    exec() {
+        if (this.lage !== "DROP") return "NO-DROP";
+        return {
+            state: "ACTIVE",
+            direction: "DOWN",
+            respo: this.respo,
+            io: this.io,
+            axis: this.axis,
+            pipeline: 1,
+            port: {
+                ma1: "release",
+                ma2: "reduce",
+                ma3: "lower"
+            }
+        };
+    }
+};
+
+const DROP = MAIN.exec();
+console.log(DROP);
+</script>

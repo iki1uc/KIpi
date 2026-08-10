@@ -1,0 +1,33 @@
+<script>
+/* iki1uc – MAIN · Bewegung 2 · PULL
+   Funktioniert nur, wenn Lage = "PULL"
+   Universelle Rückwärtsbewegung / Rückführung
+*/
+
+const MAIN = {
+    lage: "PULL",
+    respo: "ROOT",
+    move: "backward",
+    axis: "AIV",
+    io: "allOUT",
+    exec() {
+        if (this.lage !== "PULL") return "NO-PULL";
+        return {
+            state: "ACTIVE",
+            direction: "BACKWARD",
+            respo: this.respo,
+            io: this.io,
+            axis: this.axis,
+            pipeline: 0,
+            port: {
+                ma1: "none",
+                ma2: "return",
+                ma3: "collect"
+            }
+        };
+    }
+};
+
+const PULL = MAIN.exec();
+console.log(PULL);
+</script>

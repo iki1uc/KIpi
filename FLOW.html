@@ -1,0 +1,33 @@
+<script>
+/* iki1uc – MAIN · Bewegung 4 · FLOW
+   Funktioniert nur, wenn Lage = "FLOW"
+   Universelle Fließbewegung / Stabilität / Durchlauf
+*/
+
+const MAIN = {
+    lage: "FLOW",
+    respo: "FLOW",
+    move: "stream",
+    axis: "AIR",
+    io: "allIN",
+    exec() {
+        if (this.lage !== "FLOW") return "NO-FLOW";
+        return {
+            state: "ACTIVE",
+            direction: "STREAM",
+            respo: this.respo,
+            io: this.io,
+            axis: this.axis,
+            pipeline: 3,
+            port: {
+                ma1: "flow",
+                ma2: "stable",
+                ma3: "continuous"
+            }
+        };
+    }
+};
+
+const FLOW = MAIN.exec();
+console.log(FLOW);
+</script>
