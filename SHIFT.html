@@ -1,33 +1,13 @@
-<script>
-/* iki1uc – MAIN · Bewegung 3 · SHIFT
-   Funktioniert nur, wenn Lage = "SHIFT"
-   Universelle Seitwärtsbewegung / Umlenkung / Übergang
-*/
-
-const MAIN = {
-    lage: "SHIFT",
-    respo: "ECHO",
-    move: "side",
+export const SHIFT_MASK = {
+    mode: "360°",
+    tone: "<>",
+    state: "CLOSED",
+    dir: "SIDE",
     axis: "AIR",
     io: "allIN",
-    exec() {
-        if (this.lage !== "SHIFT") return "NO-SHIFT";
-        return {
-            state: "ACTIVE",
-            direction: "SIDE",
-            respo: this.respo,
-            io: this.io,
-            axis: this.axis,
-            pipeline: 2,
-            port: {
-                ma1: "transition",
-                ma2: "shift",
-                ma3: "redirect"
-            }
-        };
-    }
+    port: ["transition", "shift", "redirect"],
+    tmp: "URSACHE",
+    rot: "360",
+    chain: "QI/IQQ",
+    internal: "NO-ACCESS"
 };
-
-const SHIFT = MAIN.exec();
-console.log(SHIFT);
-</script>
