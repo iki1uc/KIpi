@@ -1,33 +1,47 @@
-<script>
-/* iki1uc – MAIN · Bewegung 8 · DROP
-   Funktioniert nur, wenn Lage = "DROP"
-   Universelle Abwärtsbewegung / Entlastung / Abgabe / Reduktion
+/* iki1uc – TMP-ENCODE · DROP-Maske
+   Vollständig geschlossen · keine Einsicht · MAU-kompatibel · 360°
 */
 
-const MAIN = {
-    lage: "DROP",
-    respo: "NOK",
-    move: "descend",
-    axis: "AIV",
-    io: "allOUT",
-    exec() {
-        if (this.lage !== "DROP") return "NO-DROP";
+import { TMPCHAIN } from "./360.js";   // geschlossen
+import { MAU } from "./MAU.raw";       // Tonleiter
+
+const TMP_DROP = {
+    wrap(lage = "DROP") {
+
+        // TMP360 + MAU + DROP werden maskiert
+        const tmp = TMPCHAIN.full("score", "Ergebnis");
+
         return {
-            state: "ACTIVE",
-            direction: "DOWN",
-            respo: this.respo,
-            io: this.io,
-            axis: this.axis,
-            pipeline: 1,
-            port: {
-                ma1: "release",
-                ma2: "reduce",
-                ma3: "lower"
-            }
+            // Sichtbar, aber bedeutungslos
+            mode: "360°",
+            tone: MAU.DROP,        // v-
+            push: MAU.PUSH,        // +>
+            pull: MAU.PULL,        // <+
+            spin: MAU.SPIN,        // @°
+
+            // TMP-Werte sichtbar, aber nicht erklärbar
+            tmp_level: tmp.percent,
+            tmp_color: tmp.color,
+            tmp_rot: tmp.rot12x,
+
+            // DROP wird nicht offen gezeigt
+            drop: {
+                state: "CLOSED",
+                direction: "DOWN",
+                axis: "AIV",
+                io: "allOUT",
+                port: ["release", "reduce", "lower"]
+            },
+
+            // Ketten sichtbar, aber ohne Bedeutung
+            chain_QI: tmp.QI,
+            chain_IQQ: tmp.IQQ,
+
+            // interne Struktur verborgen
+            internal: "NO-ACCESS"
         };
     }
 };
 
-const DROP = MAIN.exec();
-console.log(DROP);
-</script>
+export const DROP_MASK = TMP_DROP.wrap("DROP");
+console.log(DROP_MASK);
