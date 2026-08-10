@@ -1,0 +1,12 @@
+Ebene,Operator,tmp_zug,tmp_hit,tmp_dump,tmp_lage,tmp_ursache,tmp_wirkung,tmp_ergebnis
+Ursache,slide,1,tmp_hit_1,tmp_dump_1,tmp_lage_1,tmp_slide_start,tmp_slide_shift,tmp_slide_end
+Ursache,wette,2,tmp_hit_2,tmp_dump_2,tmp_lage_2,tmp_wette_start,tmp_wette_shift,tmp_wette_end
+Ursache,score,3,tmp_hit_3,tmp_dump_3,tmp_lage_3,tmp_score_start,tmp_score_shift,tmp_score_end
+
+Wirkung,slide,4,tmp_hit_4,tmp_dump_4,tmp_lage_4,tmp_slide_effect,tmp_slide_move,tmp_slide_result
+Wirkung,wette,5,tmp_hit_5,tmp_dump_5,tmp_lage_5,tmp_wette_effect,tmp_wette_move,tmp_wette_result
+Wirkung,score,6,tmp_hit_6,tmp_dump_6,tmp_lage_6,tmp_score_effect,tmp_score_move,tmp_score_result
+
+Ergebnis,slide,7,tmp_hit_7,tmp_dump_7,tmp_lage_7,tmp_slide_final,tmp_slide_out,tmp_slide_close
+Ergebnis,wette,8,tmp_hit_8,tmp_dump_8,tmp_lage_8,tmp_wette_final,tmp_wette_out,tmp_wette_close
+Ergebnis,score,9,tmp_hit_9,tmp_dump_9,tmp_lage_9,tmp_score_final,tmp_score_out,tmp_score_close
