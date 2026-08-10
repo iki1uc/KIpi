@@ -1,0 +1,9 @@
+MAU.raw.PUSH   = +>
+MAU.raw.PULL   = <+
+MAU.raw.SHIFT  = <>
+MAU.raw.FLOW   = ~>
+MAU.raw.BREAK  = !|
+MAU.raw.SPIN   = @°
+MAU.raw.RISE   = ^+
+MAU.raw.DROP   = v-
+MAU.raw.ROOT   = 0°
