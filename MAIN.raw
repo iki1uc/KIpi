@@ -1,0 +1,9 @@
+PUSH  = +>
+PULL  = <+
+SHIFT = <>
+FLOW  = ~>
+BREAK = !|
+SPIN  = @°
+RISE  = ^+
+DROP  = v-
+ROOT  = 0°
