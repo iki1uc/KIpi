@@ -2,30 +2,57 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>4u – Response Layer</title>
+<title>iki1uc · Koordinaten‑Atomkörper</title>
 
 <style>
 body{background:#000;color:#0f0;font-family:monospace;padding:20px;}
-pre{background:#111;padding:20px;border:1px solid #333;}
-button{background:#111;color:#0f0;border:1px solid #333;padding:8px 16px;}
+h1,h2{color:#0f0;}
+pre{background:#111;padding:20px;border:1px solid #333;margin-bottom:20px;}
+table{width:100%;border-collapse:collapse;margin-top:20px;}
+td,th{border:1px solid #333;padding:6px;color:#0f0;}
+th{background:#111;}
 </style>
 </head>
 
 <body>
 
-<h1>4u – Response Layer</h1>
+<h1>iki1uc · Koordinaten‑Atomkörper</h1>
+<p>6‑Achse → 756‑Achse → SAT‑GEO‑VECTOR → KIpi → MAIN → MAU → TMP.</p>
 
-<button onclick="show()">RESPO</button>
+<!-- 1 · ATOMGEOMETRIE -->
+<h2>1 · Atomare Ursache‑Wirkungs‑Geometrie</h2>
+<pre>
+       ◉
+   ↗     ↘
+  3         9
+   ↘       ↗
+      ◎
+   ↗     ↘
+◉ ─◎─ ◆
+│   ╲  │
+△ ─▣─ 81
+╱   │   ╲
+3 ─ 9 ─ 756
+◆ → 756 → △
+ 81       ◆
+   ↘       ↗
+      △
+   ↗     ↘
+  27       ▣
+   ↘       ↗
+      3 ↺
+</pre>
 
-<pre id="out">Bereit...</pre>
+<p>Dies ist der KIpi‑Atomkörper:  
+Ursache → Wirkung → Ergebnis.</p>
 
-<script type="module">
-import { respo } from "./respo.js";
+<!-- 2 · TMP-MATRIX -->
+<h2>2 · TMP‑Matrix (U → W → E)</h2>
 
-function show(){
-  out.textContent = JSON.stringify(respo, null, 2);
-}
-</script>
+<table>
+<tr>
+<th>Ebene</th><th>Operator</th><th>tmp_zug</th><th>tmp_hit</th><th>tmp_dump</th><th>tmp_lage</th><th>tmp_ursache</th><th>tmp_wirkung</th><th>tmp_ergebnis</th>
+</tr>
 
-</body>
-</html>
+<tr><td>Ursache</td><td>slide</td><td>1</td><td>tmp_hit_1</td><td>tmp_dump_1</td><td>tmp_lage_1</td><td>tmp_slide_start</td><td>tmp_slide_shift</td><td>tmp_slide_end</td></tr>
+<tr><td>Ursache
