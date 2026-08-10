@@ -1,33 +1,13 @@
-<script>
-/* iki1uc – MAIN · Bewegung 7 · RISE
-   Funktioniert nur, wenn Lage = "RISE"
-   Universelle Aufwärtsbewegung / Erhöhung / Verstärkung / Wachstum
-*/
-
-const MAIN = {
-    lage: "RISE",
-    respo: "OK",
-    move: "ascend",
+export const RISE_MASK = {
+    mode: "360°",
+    tone: "^+",
+    state: "CLOSED",
+    dir: "UP",
     axis: "AIR",
     io: "allIN",
-    exec() {
-        if (this.lage !== "RISE") return "NO-RISE";
-        return {
-            state: "ACTIVE",
-            direction: "UP",
-            respo: this.respo,
-            io: this.io,
-            axis: this.axis,
-            pipeline: 4,
-            port: {
-                ma1: "increase",
-                ma2: "boost",
-                ma3: "grow"
-            }
-        };
-    }
+    port: ["increase", "boost", "grow"],
+    tmp: "WIRKUNG",
+    rot: "12x",
+    chain: "QI/IQQ",
+    internal: "NO-ACCESS"
 };
-
-const RISE = MAIN.exec();
-console.log(RISE);
-</script>
