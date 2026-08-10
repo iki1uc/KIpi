@@ -1,33 +1,47 @@
-<script>
-/* iki1uc – MAIN · Bewegung 5 · BREAK
-   Funktioniert nur, wenn Lage = "BREAK"
-   Universelle Unterbrechung / Stop / Cut / Reset
+/* iki1uc – TMP-ENCODE · BREAK-Maske
+   Vollständig geschlossen · keine Einsicht · MAU-kompatibel · 360°
 */
 
-const MAIN = {
-    lage: "BREAK",
-    respo: "BREAK",
-    move: "cut",
-    axis: "AIV",
-    io: "allOUT",
-    exec() {
-        if (this.lage !== "BREAK") return "NO-BREAK";
+import { TMPCHAIN } from "./360.js";   // geschlossen
+import { MAU } from "./MAU.raw";       // Tonleiter
+
+const TMP_BREAK = {
+    wrap(lage = "BREAK") {
+
+        // TMP360 + MAU + BREAK werden maskiert
+        const tmp = TMPCHAIN.full("score", "Wirkung");
+
         return {
-            state: "HALT",
-            direction: "STOP",
-            respo: this.respo,
-            io: this.io,
-            axis: this.axis,
-            pipeline: 0,
-            port: {
-                ma1: "stop",
-                ma2: "cut",
-                ma3: "reset"
-            }
+            // Sichtbar, aber bedeutungslos
+            mode: "360°",
+            tone: MAU.BREAK,       // !|
+            push: MAU.PUSH,        // +>
+            pull: MAU.PULL,        // <+
+            spin: MAU.SPIN,        // @°
+
+            // TMP-Werte sichtbar, aber nicht erklärbar
+            tmp_level: tmp.percent,
+            tmp_color: tmp.color,
+            tmp_rot: tmp.rot8x,
+
+            // BREAK wird nicht offen gezeigt
+            break: {
+                state: "CLOSED",
+                direction: "CUT",
+                axis: "AIV",
+                io: "allOUT",
+                port: ["stop", "cut", "reset"]
+            },
+
+            // Ketten sichtbar, aber ohne Bedeutung
+            chain_QI: tmp.QI,
+            chain_IQQ: tmp.IQQ,
+
+            // interne Struktur verborgen
+            internal: "NO-ACCESS"
         };
     }
 };
 
-const BREAK = MAIN.exec();
-console.log(BREAK);
-</script>
+export const BREAK_MASK = TMP_BREAK.wrap("BREAK");
+console.log(BREAK_MASK);
