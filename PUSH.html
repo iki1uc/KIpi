@@ -1,33 +1,13 @@
-<script>
-/* iki1uc – MAIN · Bewegung 1 · PUSH
-   Funktioniert nur, wenn Lage = "PUSH"
-   Universelle Vorwärtsbewegung
-*/
-
-const MAIN = {
-    lage: "PUSH",
-    respo: "OK",
-    move: "forward",
+export const PUSH_MASK = {
+    mode: "360°",
+    tone: "+>",
+    state: "CLOSED",
+    dir: "FORWARD",
     axis: "AIR",
     io: "allIN",
-    exec() {
-        if (this.lage !== "PUSH") return "NO-PUSH";
-        return {
-            state: "ACTIVE",
-            direction: "FORWARD",
-            respo: this.respo,
-            io: this.io,
-            axis: this.axis,
-            pipeline: 1,
-            port: {
-                ma1: "impulse",
-                ma2: "none",
-                ma3: "none"
-            }
-        };
-    }
+    port: ["impulse", "none", "none"],
+    tmp: "IMPULS",
+    rot: "24x",
+    chain: "QI/IQQ",
+    internal: "NO-ACCESS"
 };
-
-const PUSH = MAIN.exec();
-console.log(PUSH);
-</script>
