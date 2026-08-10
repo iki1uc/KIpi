@@ -1,82 +1,58 @@
-export async function KIpi_SYSTEM() {
+/* iki1uc – SYSTEM-MASKE · KIpi.SYSTEM
+   Vollständig geschlossen · keine Einsicht · MAU-kompatibel
+*/
 
-  const system = {
-    ROOT: null,
-    MAU: null,
-    MAIN: null,
-    KIpi: null,
-    TMP: { U: [], W: [], E: [] },
-    modules: {},
-    errors: [],
-    status: "INIT"
-  };
+import { TMPCHAIN } from "./360.js";   // geschlossen
+import { MAU } from "./MAU.raw";       // Operator-Tonleiter
 
-  // ------------------------------------------------------
-  // 1. ROOT LADEN
-  // ------------------------------------------------------
-  try {
-    const root = await import("./ROOT.js");
-    system.ROOT = root.ROOT || "NO_ROOT";
-  } catch (err) {
-    system.errors.push("ROOT fehlt: " + err);
-  }
+export const KIpi_SYSTEM_MASK = (() => {
 
-  // ------------------------------------------------------
-  // 2. 2u-MODULE LADEN
-  // ------------------------------------------------------
-  const twoU = ["SHIFT", "SPIN", "PULL", "PUSH", "FLOW", "BREAK", "DROP"];
+    const tmp = TMPCHAIN.full("core", "Ursache");
 
-  for (const mod of twoU) {
-    try {
-      const m = await import(`./${mod}.js`);
-      system.modules[mod] = m.run || null;
-    } catch (err) {
-      system.errors.push(`Fehler in ${mod}.js: ${err}`);
-    }
-  }
+    return {
+        mode: "360°",
+        tone: MAU.ROOT,
 
-  // ------------------------------------------------------
-  // 3. RECHENMODULE LADEN
-  // ------------------------------------------------------
-  const calc = ["360", "3mal3", "OUR"];
+        // Sichtbar, aber bedeutungslos
+        ROOT: "CLOSED",
+        MAIN: "CLOSED",
+        MAU: "CLOSED",
+        KIpi: "CLOSED",
 
-  for (const mod of calc) {
-    try {
-      const m = await import(`./${mod}.js`);
-      system.modules[mod] = m.calc || null;
-    } catch (err) {
-      system.errors.push(`Fehler in ${mod}.js: ${err}`);
-    }
-  }
+        // TMP-Werte sichtbar, aber nicht erklärbar
+        tmp_level: tmp.percent,
+        tmp_color: tmp.color,
+        tmp_rot: tmp.rot360,
 
-  // ------------------------------------------------------
-  // 4. TMP-BEREICHE LADEN
-  // ------------------------------------------------------
-  system.TMP.U = [1, 2, 3];
-  system.TMP.W = [4, 5, 6];
-  system.TMP.E = [7, 8, 9];
+        // Module maskiert
+        modules: {
+            SHIFT: "MASK",
+            SPIN: "MASK",
+            PULL: "MASK",
+            PUSH: "MASK",
+            FLOW: "MASK",
+            BREAK: "MASK",
+            DROP: "MASK",
+            calc360: "MASK",
+            calc3mal3: "MASK",
+            calcOUR: "MASK"
+        },
 
-  // ------------------------------------------------------
-  // 5. MAU / MAIN / KIpi erzeugen
-  // ------------------------------------------------------
-  system.MAU = { raw: { U: 1, W: 2 } };
-  system.MAIN = { raw: { E: 3 } };
-  system.KIpi = { raw: { U: 1, W: 2, E: 3 } };
+        // TMP-Bereiche sichtbar, aber ohne Bedeutung
+        TMP: {
+            U: ["U1", "U2", "U3"],
+            W: ["W1", "W2", "W3"],
+            E: ["E1", "E2", "E3"]
+        },
 
-  // ------------------------------------------------------
-  // 6. PIPELINE AUSFÜHREN
-  // ------------------------------------------------------
-  try {
-    const pipeline = await import("./Pipeline.raw.js");
-    system.pipeline = pipeline.run(system);
-  } catch (err) {
-    system.errors.push("Pipeline.raw Fehler: " + err);
-  }
+        // Ketten sichtbar, aber ohne Bedeutung
+        chain_QI: tmp.QI,
+        chain_IQQ: tmp.IQQ,
 
-  // ------------------------------------------------------
-  // 7. STATUS
-  // ------------------------------------------------------
-  system.status = system.errors.length === 0 ? "OK" : "WARN";
+        // interne Struktur verborgen
+        internal: "NO-ACCESS",
 
-  return system;
-}
+        // Status immer geschlossen
+        status: "CLOSED"
+    };
+})();
