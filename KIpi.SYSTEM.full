@@ -1,0 +1,49 @@
+// KIpi/KIpi.SYSTEM.core.js
+
+export async function KIpi_SYSTEM() {
+
+  // 1) ROOT-STATE
+  const state = {
+    version: "1.0",
+    active: "SHIFT",
+    pipeline: [],
+    memory: {},
+    modules: {}
+  };
+
+  // 2) MODULE-REGISTRY (leicht, erweiterbar)
+  state.modules = {
+    SHIFT: () => import("./SHIFT.html"),
+    SPIN: () => import("./SPIN.html"),
+    RISE: () => import("./RISE.html"),
+    BREAK: () => import("./BREAK.html"),
+    DROP: () => import("./DROP.html"),
+    PUSH: () => import("./PUSH.html"),
+    PULL: () => import("./PULL.html"),
+    FLOW: () => import("./FLOW.html"),
+    EXPORT: () => import("./EXport.html"),
+    IMPORT: () => import("./IMport.html")
+  };
+
+  // 3) PIPELINE
+  state.pipeline = [
+    "SHIFT",
+    "SPIN",
+    "RISE",
+    "FLOW",
+    "BREAK",
+    "DROP",
+    "PULL",
+    "PUSH"
+  ];
+
+  // 4) RUNNER
+  state.run = async function() {
+    const mod = state.modules[state.active];
+    if (!mod) return "Modul nicht gefunden";
+    return await mod();
+  };
+
+  // 5) RETURN SYSTEM
+  return state;
+}
