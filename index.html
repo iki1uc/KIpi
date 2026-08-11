@@ -19,12 +19,12 @@
   import { KIpi_SYSTEM } from "./KIpi/KIpi.SYSTEM.core.js";
 
   async function load() {
-   const sys = await KIpi_SYSTEM();
-document.getElementById("out").innerText =
-  JSON.stringify(sys, null, 2);
+    const sys = await KIpi_SYSTEM();
+    document.getElementById("out").innerText =
+      JSON.stringify(sys, null, 2);
+  }
 
-
-  load();
+  load();   // ← nur EINMAL aufrufen!
 </script>
 
 </body>
