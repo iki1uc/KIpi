@@ -6,7 +6,7 @@ i.m — Public · T · iki1uc
 81/justice.md = 81 · E = {81, 756, 27, ↺} · T reingelegt
 U → W → E = 3e → 9e → Justice · 720° · )/( · Final · Man.n
 
----
+--- 
 
 ## KIpi · Ursache-Wirkungsformel · Geometrie · QI/IQQ
 
