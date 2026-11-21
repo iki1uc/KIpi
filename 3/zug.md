@@ -1,0 +1,2 @@
+- 3e dreht 720°. 3e steht nicht fest. 3e bewegt sich im Rahmen.
+-  3e ist 3x3. 3e ist nicht 1x9. 3e ist Fläche, nicht Linie. 
