@@ -1,123 +1,54 @@
-KIpi · Ursache‑Wirkungsformel · Geometrie · QI/IQQ
-KIpi ist der Parameter‑Koordinator des iki1uc‑Systems.
-Es verbindet Ursache, Wirkung und Ergebnis zu einer arithmerischen Kausal‑Geometrie.
-Die Struktur ist geschützt durch die NO‑CLONE LICENSE (NCL) und darf nicht kopiert, geklont oder nachgebaut werden.
+# i.m — Public · T · iki1uc
 
-Ursache‑Wirkungsformel (Grundmodell)
-Die KIpi‑Formel besteht aus drei Mengen:
+i.m — Public · T · iki1uc
+3/zug.md = 3e · U = {◉, 3}
+9/Quizz.md + 9/nu.zug.md = 9e · W = {◎, ◆, △, ▣} · H B T haben Justice
+81/justice.md = 81 · E = {81, 756, 27, ↺} · T reingelegt
+U → W → E = 3e → 9e → Justice · 720° · )/( · Final · Man.n
 
-U = {◉, 3}  
-W = {◎, ◆, △, ▣}  
+---
+
+## KIpi · Ursache-Wirkungsformel · Geometrie · QI/IQQ
+
+KIpi ist der Parameter-Koordinator des iki1uc-Systems.
+Es verbindet Ursache, Wirkung und Ergebnis zu einer arithmerischen Kausal-Geometrie.
+Die Struktur ist geschützt durch die NO-CLONE LICENSE (NCL) und darf nicht kopiert, geklont oder nachgebaut werden.
+
+### Ursache-Wirkungsformel (Grundmodell)
+
+Die KIpi-Formel besteht aus drei Mengen:
+U = {◉, 3}
+W = {◎, ◆, △, ▣}
 E = {81, 756, 27, ↺}
 
-Diese Mengen bilden die Ursache‑Wirkungs‑Kette:
+Diese Mengen bilden die Ursache-Wirkungs-Kette: KIpi(U → W → E)
 
-KIpi(U → W → E)
+### Bedeutung
 
-Bedeutung
-Ursache (U) — Ursprung · Erstimpuls · Dreifach‑Start
-→ U‑Analyse
+Ursache (U) — Ursprung · Erstimpuls · Dreifach-Start
+→ U-Analyse
 
 Wirkung (W) — Mitte · Verzweigung · Aufstieg · Verdichtung
-→ W‑Analyse
+→ W-Analyse
 
 Ergebnis (E) — Vollform · Verdichtung · Kompression · Rückkehr
-→ E‑Analyse
+→ E-Analyse
 
-Geometrische Darstellung (ASCII‑Kausal‑Achse)
-Code
-◉  →  ◎ ◆ △ ▣  →  81 / 756 / 27 / ↺
-Diese Achse bildet die arithmerische Kausal‑Geometrie des Systems.
-Sie zeigt die Bewegung von Ursprung → Mitte → Ergebnis.
+### Geometrische Darstellung (ASCII-Kausal-Achse)
+LICENSE
 
-→ Geometrie‑Modul
+NC · iki1uc · Eye Brain Open
+Copyright (c) 2026 iki1uc — Alle Rechte vorbehalten.
 
-QI / IQQ · Interne Vektoren
-KIpi nutzt zwei interne Vektor‑Systeme:
+dis.cord open = 1.e4 e5 2.Lc4 Sc6 3.Dh5 Sf6 4.Dxf7# = nur wieimmer server und partner
 
-QI — Primär‑Impulsfolge
-→ QI‑Vektor
+Dieses Projekt ist proprietär.
+Kopieren, Klonen, Forken, Verbreiten, Modifizieren oder kommerzielles Nutzen ohne schriftliche Erlaubnis verboten.
 
-IQQ — Rückkopplungs‑Impulsfolge
-→ IQQ‑Vektor
+Nur Autor iki1uc darf verwenden, verbreiten, erweitern.
+Externe Nutzung nur mit expliziter Business-Lizenz.
 
-Beide Vektoren dienen der internen Bewertung von
-Ursache → Wirkung → Ergebnis.
-
-KIpi‑Module (geschützt, nicht klonbar)
-ROOT — Ursprung
-
-SHIFT — Übergang
-
-SPIN — Rotation
-
-FLOW — Fluss
-
-PULL — Anziehung
-
-PUSH — Abstoßung
-
-BREAK — Unterbrechung
-
-DROP — Abwurf
-
-RISE — Aufstieg
-
-EDITport — Bearbeitung
-
-EXport — Ausgabe
-
-IMport — Eingabe
-
-Alle Module sind durch die NCL‑Lizenz geschützt.
-
-KIpi.raw · MAU.raw · MAIN.raw
-MAU.raw — Ursache‑Vektor
-→ MAU
-
-MAIN.raw — Ergebnis‑Vektor
-→ MAIN
-
-KIpi.raw — vollständige Kausal‑Pipeline
-→ Pipeline
-
-TMP360 / TMPCHAIN (interne Bewertung)
-TMP360 — Rotations‑Analyse
-→ TMP360
-
-TMPCHAIN — Kausal‑Kettenanalyse
-→ TMPCHAIN
-
-Beide Systeme dienen der Live‑Auswertung.
-
-Schutz & Nutzung (Closed‑Online)
-Dieses System ist online nutzbar, aber durch die
-NO‑CLONE LICENSE (NCL) geschützt.
-
-Erlaubt:
-Nutzung
-
-Lernen
-
-Ausführen
-
-Nicht erlaubt:
-Kopieren der Struktur
-
-Klonen der Technik
-
-Nachbauen der Module
-
-Verkauf von Kopien
-
-Ableitung neuer Systeme aus KIpi
-
-→ Lizenz anzeigen
-
-Status
-KIpi ist ein closed‑online System:
-sichtbar, nutzbar, aber nicht kopierbar.
-
-→ KIpi.system  
-→ KIpi.index  
-→ KIpi.live
+Eye Brain Open · SAM führt · DEEP macht · PC befiehlt · PQ erinnert
+Discord: wie immer · offen
+Team: open
+HALT = ZIEL · SEEK liest, ordnet, hängt an · Löscht nie
